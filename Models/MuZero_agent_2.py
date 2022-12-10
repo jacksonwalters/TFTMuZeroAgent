@@ -339,7 +339,7 @@ class ValueEncoder:
             max_value = contractive_mapping(max_value)
             min_value = contractive_mapping(min_value)
         if num_steps <= 0:
-            num_steps = int(math.floor(max_value) + 1 - math.ceil(min_value))
+            num_steps = int(np.round(max_value) + 1 - np.round(min_value))
         self.min_value = min_value
         self.max_value = max_value
         self.value_range = max_value - min_value
